@@ -1,0 +1,3 @@
+module.exports = {
+    username: ['VEVO', 'DisneyCollectorBR', 'PewDiePie', 'TaylorSwiftVEVO', 'littlebabybum', 'getmovies', 'MashaMedvedTV', 'stampylonghead', 'popularmmos', 'blucollection', 'DisneyCarToys', 'BuzzFeedVideo', 'SpinninRec', 'netdmuzikk', 'emimusic', 'WWEFanNation', 'markiplierGAME', 'tseries', 'TheDiamondMinecart', 'movieclipsTRAILERS', 'jacksepticeye', 'matercarclub', 'vanossgaming', 'TheEducVideos', 'MeghanTrainorVEVO', 'KatyPerryVEVO']
+};

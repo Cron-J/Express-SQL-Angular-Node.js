@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        .centered {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .margintop10 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainCtrl">
+    <form name="youtubeForm">
+        <div class="row">
+            <div class="col-sm-12 centered">
+                <div style="display:inline-block; min-height:290px;">
+                    <datepicker ng-model="youtube.date" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-12 centered"> -->
+            <div class="col-sm-4 col-sm-offset-4">
+                <input name="users" type="text" ng-model="youtube.username" typeahead="user as user for user in userList | filter:$viewValue | limitTo:8" class="form-control" required>
+                <div style="color:red;text-align:center;" ng-show="youtubeForm.users.$error.required && submitted">please select user name</div>
+            </div>
+            <!-- </div> -->
+            <div class="col-sm-12 centered margintop10">
+                <div class="btn btn-primary" ng-click="getScheduleInfo(youtube,youtubeForm);submitted=true;">Get viewers for a day</div>
+                <div class="btn btn-primary" ng-click="getScheduleData(youtube,youtubeForm);submitted=true;">Get total viewers</div>
+            </div>
+            <div class="col-sm-12 margintop10">
+
+
+                <div class="col-sm-6" style="text-align:right" ng-show="views">Views : </div>
+                <div class="col-sm-6" style="text-align:left">{{views}}</div>
+
+            </div>
+        </div>
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
